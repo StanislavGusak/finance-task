@@ -50,7 +50,9 @@ const TickersList = () => {
             );
           })
         ) : (
-          <p>Sorry, you don't have a connection to server.</p>
+          <p className="text-2xl text-red-950 italic">
+            Sorry, you don't have a connection to server.
+          </p>
         )}
       </ul>
     </div>
