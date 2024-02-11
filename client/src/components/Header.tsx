@@ -1,25 +1,13 @@
-import { NavLink } from "react-router-dom";
+import Navigation from "./Navigation";
+import TickersStatus from "./TickersStatus";
 
 const Header = () => {
   return (
     <header className="top-header">
-        <ul className="main-nav">
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/tickers">Tickers</NavLink>
-          </li>
-          <li>
-            <NavLink to="/user">User page</NavLink>
-          </li>
-          <li>
-            <NavLink to="*">Error page</NavLink>
-          </li>
-        </ul>
+      <Navigation />
+      <TickersStatus />
     </header>
   );
 };
 
 export default Header;
-

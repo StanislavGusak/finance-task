@@ -50,6 +50,7 @@ const userSlice = createSlice({
     },
   },
 });
+
 export const { userTicker, addTicker, deleteTicker, uploadTicker } =
   userSlice.actions;
 

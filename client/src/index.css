@@ -8,13 +8,16 @@
   padding-bottom: 2em;
   margin: 0 auto 2em;
   background: #fff;
-  border-radius: .5em;
+  border-radius: 0.5em;
   border: solid 1px #edeff0;
-  box-shadow: 0 3px rgba(0,0,0, .1);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
 .top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #edeff0;
   margin-bottom: 1em;
 }
@@ -24,18 +27,47 @@
 }
 
 .main-nav a {
-  font-size: .95em;
+  font-size: 0.95em;
   color: #222;
   text-align: center;
   text-transform: uppercase;
   display: block;
   padding: 1em;
-  transition: .2s;
+  transition: 0.2s;
 }
 .main-nav a:hover,
 .main-nav .active {
   color: #fff;
   background: #3b80d1;
+}
+
+.cart_link {
+  position: relative;
+  margin-right: 10px;
+}
+
+.cart_icon {
+  width: 20px;
+  height: 20px;
+  fill: #e6533c;
+  transform: scale(1.4);
+}
+
+.cart_count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  border-radius: 50%;
+  color: white;
+  background-color: #3e9d2a;
+  font-size: 10px;
+  transform: translate(-50%);
 }
 
 #tickers {
