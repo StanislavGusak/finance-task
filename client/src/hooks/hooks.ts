@@ -30,5 +30,7 @@ export const usePrevPrice = (value: number): number | undefined => {
     ref.current = value;
   }, [value]);
 
-  return ref.current;
+  if (ref.current && ref.current > value) {
+    return ref.current;
+  }
 };
