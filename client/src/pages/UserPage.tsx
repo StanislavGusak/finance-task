@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { TickerType } from "../types/types";
-import { useAppSelector, useSocketConnection } from "../redux/hooks";
+import { useAppSelector, useSocketConnection } from "../hooks/hooks";
 import Ticker from "../components/Ticker";
 
 const UserPage = () => {
@@ -51,7 +51,12 @@ const UserPage = () => {
           <p className="text-center text-2xl italic mb-5">
             No tickers selected! Please select a ticker.
           </p>
-          <Link to="/tickers" className="rounded-full bg-emerald-800 px-5 py-2 hover:bg-emerald-400  uppercase text-white">Select</Link>
+          <Link
+            to="/tickers"
+            className="rounded-full bg-emerald-800 px-5 py-2 hover:bg-emerald-400  uppercase text-white"
+          >
+            Select
+          </Link>
         </>
       )}
     </div>

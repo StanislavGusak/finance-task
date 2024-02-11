@@ -1,6 +1,6 @@
 import { useCallback, memo } from "react";
 import { Link } from "react-router-dom";
-import { useAppDispatch, usePrevPrice } from "../redux/hooks";
+import { useAppDispatch, usePrevPrice } from "../hooks/hooks";
 import type { TickerType } from "../types/types";
 import { deleteTicker } from "../redux/UserSlice";
 

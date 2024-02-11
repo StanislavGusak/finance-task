@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
-import type { AppDispatch, RootState } from "./store";
+import type { AppDispatch, RootState } from "../redux/store";
 import { socket } from "../socket/socket";
 import { TickerType } from "../types/types";
-import { setAvailableTicker } from "./TickersSlice";
+import { setAvailableTicker } from "../redux/TickersSlice";
 
 export const useAppDispatch: () => AppDispatch = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
@@ -27,11 +27,7 @@ export const usePrevPrice = (value: number): number | undefined => {
   const ref = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    if (ref.current === undefined) {
-      ref.current = value;
-    } else {
-      ref.current = value;
-    }
+    ref.current = value;
   }, [value]);
 
   return ref.current;

@@ -4,7 +4,7 @@ import {
   useAppDispatch,
   useAppSelector,
   useSocketConnection,
-} from "../redux/hooks";
+} from "../hooks/hooks";
 import { addTicker } from "../redux/UserSlice";
 import { tickersInfo } from "../data/tickersInfo";
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArchive } from "react-icons/fa";
 import { RootState } from "../redux/store";
-import { useAppSelector } from "../redux/hooks";
+import { useAppSelector } from "../hooks/hooks";
 
 const TickersStatus = () => {
   const selectedTickers = useAppSelector(
