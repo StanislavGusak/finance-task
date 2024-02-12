@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage";
 import App from "./App";
 import userReducer, { addTicker } from "./redux/UserSlice";
 import tickerReducer from "./redux/TickersSlice";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 test("If HomePage is rendered", () => {
   render(<HomePage />);
@@ -13,11 +15,13 @@ test("If HomePage is rendered", () => {
 
 test("renders TickersList when navigating to /tickers", () => {
   render(
-    <MemoryRouter initialEntries={["/tickers"]}>
-      <Routes>
-        <Route path="/tickers/*" element={<App />} />
-      </Routes>
-    </MemoryRouter>
+    <Provider store={store}>
+      <MemoryRouter initialEntries={["/tickers"]}>
+        <Routes>
+          <Route path="/tickers/*" element={<App />} />
+        </Routes>
+      </MemoryRouter>
+    </Provider>
   );
 
   const tickersListElement = screen.getByText("Tickers");

@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { TickerType } from "types/types";
+import { TickerType } from "../types/types";
 import {
   useAppDispatch,
   useAppSelector,
@@ -22,7 +22,7 @@ const TickersList = () => {
   );
 
   return (
-    <div className="px-5">
+    <section className="px-5">
       <h2 className="text-center text-2xl font-bold italic">Tickers</h2>
       <ul>
         {items.tickers.length > 0 ? (
@@ -55,7 +55,7 @@ const TickersList = () => {
           </p>
         )}
       </ul>
-    </div>
+    </section>
   );
 };
 
